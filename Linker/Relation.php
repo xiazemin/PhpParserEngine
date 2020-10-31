@@ -1,7 +1,7 @@
 <?php
 namespace Linker;
 use Parser\Utils\OutPut;
-use Utils\Utils;
+use Parser\Utils\Utils;
 
 class Relation
 {
@@ -9,7 +9,7 @@ class Relation
         $obj=trim($obj,"\\");
         if($obj=="this"||$obj=="self"||$obj=="static"){
             return $aAllClass[$sCallerClass]->nameSpace.
-                $aAllClass[$sCallerClass]->class;
+            Utils::getShortClassName($aAllClass[$sCallerClass]->class);
         }else{
             /**
              * {
@@ -41,7 +41,7 @@ class Relation
         if($short=="self" ||$short=="static"){
             OutPut::echo($aAllClass[$sCallerClass]->nameSpace);
             return $aAllClass[$sCallerClass]->nameSpace.
-                $aAllClass[$sCallerClass]->class;
+            Utils::getShortClassName($aAllClass[$sCallerClass]->class);
         }
         return self::findUsedClass($aAllClass,$sCallerClass,$sCalleeClass);
     }

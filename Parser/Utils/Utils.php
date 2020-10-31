@@ -109,5 +109,11 @@ class Utils
         $s=str_replace(".","_",$s);
         return str_replace("\\","_",$s);
     }
-
+    
+    public static function getShortClassName($name){
+        if(empty($name)){
+            return "nil";
+        }
+        return substr($name,1+strrpos($name,"\\"));
+    }
 }

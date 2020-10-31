@@ -10,99 +10,99 @@ _Demo_ClassC_ClassC2[label="_Demo_ClassC_ClassC2", shape="circle"]
 
 _Demo_ClassB_ClassB2[label="_Demo_ClassB_ClassB2", shape="circle"]
 edge[color="#002327";style="dashed"];
-_Demo_ClassA_ClassA1 [shape=record, label="_Demo_ClassA_ClassA1 | { <CallA11> CallA11|<CallA12> CallA12 }"];
+_Demo_ClassA_ClassA1 [shape=record, label="_Demo_ClassA_ClassA1 | { <_Demo_ClassA_ClassA1CallA11> CallA11|<_Demo_ClassA_ClassA1CallA12> CallA12 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassB_ClassB1 [shape=record, label="_Demo_ClassB_ClassB1 | { <CallB11> CallB11|<CallB12> CallB12|<CallB13> CallB13 }"];
+_Demo_ClassB_ClassB1 [shape=record, label="_Demo_ClassB_ClassB1 | { <_Demo_ClassB_ClassB1CallB11> CallB11|<_Demo_ClassB_ClassB1CallB12> CallB12|<_Demo_ClassB_ClassB1CallB13> CallB13 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassC_ClassC1 [shape=record, label="_Demo_ClassC_ClassC1 | { <CallC11> CallC11|<CallC12> CallC12 }"];
+_Demo_ClassC_ClassC1 [shape=record, label="_Demo_ClassC_ClassC1 | { <_Demo_ClassC_ClassC1CallC11> CallC11|<_Demo_ClassC_ClassC1CallC12> CallC12 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassC_ClassC2 [shape=record, label="_Demo_ClassC_ClassC2 | { <CallC21> CallC21|<CallC22> CallC22 }"];
+_Demo_ClassC_ClassC2 [shape=record, label="_Demo_ClassC_ClassC2 | { <_Demo_ClassC_ClassC2CallC21> CallC21|<_Demo_ClassC_ClassC2CallC22> CallC22 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassB_ClassB2 [shape=record, label="_Demo_ClassB_ClassB2 | { <CallB21> CallB21|<CallB22> CallB22 }"];
+_Demo_ClassB_ClassB2 [shape=record, label="_Demo_ClassB_ClassB2 | { <_Demo_ClassB_ClassB2CallB21> CallB21|<_Demo_ClassB_ClassB2CallB22> CallB22 }"];
 edge[color="#FF6347";style="solid"];
 edge[color="#FF6347";style="solid"];
-_Demo_ClassA_ClassA1->CallA11[label="method"]
+_Demo_ClassA_ClassA1->_Demo_ClassA_ClassA1CallA11[label="method"]
 edge[color="#00FF27";style="dashed"];
-CallA11->CallB13[label="call"]
+_Demo_ClassA_ClassA1CallA11->_Demo_ClassB_ClassB1CallB13[label="call"]
 edge[color="#FF6347";style="solid"];
 edge[color="#FF6347";style="solid"];
-_Demo_ClassB_ClassB1->CallB11[label="method"]
+_Demo_ClassB_ClassB1->_Demo_ClassB_ClassB1CallB11[label="method"]
 edge[color="#0032FF"];
-CallB11->CallC11[label="staticCall"]
+_Demo_ClassB_ClassB1CallB11->_Demo_ClassC_ClassC1CallC11[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#FF6347";style="solid"];
-_Demo_ClassC_ClassC1->CallC11[label="method"]
+_Demo_ClassC_ClassC1->_Demo_ClassC_ClassC1CallC11[label="method"]
 edge[color="#FF6347";style="solid"];
-_Demo_ClassC_ClassC1->CallC12[label="method"]
+_Demo_ClassC_ClassC1->_Demo_ClassC_ClassC1CallC12[label="method"]
 edge[color="#FF6347";style="solid"];
-_Demo_ClassB_ClassB1->CallB12[label="method"]
+_Demo_ClassB_ClassB1->_Demo_ClassB_ClassB1CallB12[label="method"]
 edge[color="#0032FF"];
-CallB12->CallC12[label="staticCall"]
-edge[color="#FF6347";style="solid"];
-edge[color="#0032FF"];
-CallB12->CallC21[label="staticCall"]
+_Demo_ClassB_ClassB1CallB12->_Demo_ClassC_ClassC1CallC12[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallB12->CallC22[label="staticCall"]
-edge[color="#FF6347";style="solid"];
-edge[color="#FF6347";style="solid"];
-_Demo_ClassC_ClassC2->CallC21[label="method"]
-edge[color="#FF6347";style="solid"];
-_Demo_ClassC_ClassC2->CallC22[label="method"]
-edge[color="#FF6347";style="solid"];
-_Demo_ClassB_ClassB1->CallB13[label="method"]
-edge[color="#0032FF"];
-CallB13->CallC12[label="staticCall"]
+_Demo_ClassB_ClassB1CallB12->_Demo_ClassC_ClassC2CallC21[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallB13->CallC21[label="staticCall"]
+_Demo_ClassB_ClassB1CallB12->_Demo_ClassC_ClassC2CallC22[label="staticCall"]
+edge[color="#FF6347";style="solid"];
+edge[color="#FF6347";style="solid"];
+_Demo_ClassC_ClassC2->_Demo_ClassC_ClassC2CallC21[label="method"]
+edge[color="#FF6347";style="solid"];
+_Demo_ClassC_ClassC2->_Demo_ClassC_ClassC2CallC22[label="method"]
+edge[color="#FF6347";style="solid"];
+_Demo_ClassB_ClassB1->_Demo_ClassB_ClassB1CallB13[label="method"]
+edge[color="#0032FF"];
+_Demo_ClassB_ClassB1CallB13->_Demo_ClassC_ClassC1CallC12[label="staticCall"]
+edge[color="#FF6347";style="solid"];
+edge[color="#0032FF"];
+_Demo_ClassB_ClassB1CallB13->_Demo_ClassC_ClassC2CallC21[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#00FF27";style="dashed"];
-CallA11->CallC21[label="call"]
+_Demo_ClassA_ClassA1CallA11->_Demo_ClassC_ClassC2CallC21[label="call"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallA11->CallB11[label="staticCall"]
+_Demo_ClassA_ClassA1CallA11->_Demo_ClassB_ClassB1CallB11[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallA11->CallB12[label="staticCall"]
+_Demo_ClassA_ClassA1CallA11->_Demo_ClassB_ClassB1CallB12[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#FF6347";style="solid"];
-_Demo_ClassA_ClassA1->CallA12[label="method"]
+_Demo_ClassA_ClassA1->_Demo_ClassA_ClassA1CallA12[label="method"]
 edge[color="#0032FF"];
-CallA12->CallB11[label="staticCall"]
-edge[color="#FF6347";style="solid"];
-edge[color="#0032FF"];
-CallA12->CallB22[label="staticCall"]
-edge[color="#FF6347";style="solid"];
-edge[color="#FF6347";style="solid"];
-_Demo_ClassB_ClassB2->CallB21[label="method"]
-edge[color="#0032FF"];
-CallB21->CallC12[label="staticCall"]
+_Demo_ClassA_ClassA1CallA12->_Demo_ClassB_ClassB1CallB11[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallB21->CallC21[label="staticCall"]
+_Demo_ClassA_ClassA1CallA12->_Demo_ClassB_ClassB2CallB22[label="staticCall"]
+edge[color="#FF6347";style="solid"];
+edge[color="#FF6347";style="solid"];
+_Demo_ClassB_ClassB2->_Demo_ClassB_ClassB2CallB21[label="method"]
+edge[color="#0032FF"];
+_Demo_ClassB_ClassB2CallB21->_Demo_ClassC_ClassC1CallC12[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallB21->CallC22[label="staticCall"]
-edge[color="#FF6347";style="solid"];
-edge[color="#FF6347";style="solid"];
-_Demo_ClassB_ClassB2->CallB22[label="method"]
-edge[color="#0032FF"];
-CallB22->CallC21[label="staticCall"]
+_Demo_ClassB_ClassB2CallB21->_Demo_ClassC_ClassC2CallC21[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#0032FF"];
-CallB22->CallC22[label="staticCall"]
+_Demo_ClassB_ClassB2CallB21->_Demo_ClassC_ClassC2CallC22[label="staticCall"]
+edge[color="#FF6347";style="solid"];
+edge[color="#FF6347";style="solid"];
+_Demo_ClassB_ClassB2->_Demo_ClassB_ClassB2CallB22[label="method"]
+edge[color="#0032FF"];
+_Demo_ClassB_ClassB2CallB22->_Demo_ClassC_ClassC2CallC21[label="staticCall"]
+edge[color="#FF6347";style="solid"];
+edge[color="#0032FF"];
+_Demo_ClassB_ClassB2CallB22->_Demo_ClassC_ClassC2CallC22[label="staticCall"]
 edge[color="#FF6347";style="solid"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassA_ClassA1 [shape=record, label="_Demo_ClassA_ClassA1 | { <CallA11> CallA11|<CallA12> CallA12 }"];
+_Demo_ClassA_ClassA1 [shape=record, label="_Demo_ClassA_ClassA1 | { <_Demo_ClassA_ClassA1CallA11> CallA11|<_Demo_ClassA_ClassA1CallA12> CallA12 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassB_ClassB1 [shape=record, label="_Demo_ClassB_ClassB1 | { <CallB11> CallB11|<CallB12> CallB12|<CallB13> CallB13 }"];
+_Demo_ClassB_ClassB1 [shape=record, label="_Demo_ClassB_ClassB1 | { <_Demo_ClassB_ClassB1CallB11> CallB11|<_Demo_ClassB_ClassB1CallB12> CallB12|<_Demo_ClassB_ClassB1CallB13> CallB13 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassC_ClassC1 [shape=record, label="_Demo_ClassC_ClassC1 | { <CallC11> CallC11|<CallC12> CallC12 }"];
+_Demo_ClassC_ClassC1 [shape=record, label="_Demo_ClassC_ClassC1 | { <_Demo_ClassC_ClassC1CallC11> CallC11|<_Demo_ClassC_ClassC1CallC12> CallC12 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassC_ClassC2 [shape=record, label="_Demo_ClassC_ClassC2 | { <CallC21> CallC21|<CallC22> CallC22 }"];
+_Demo_ClassC_ClassC2 [shape=record, label="_Demo_ClassC_ClassC2 | { <_Demo_ClassC_ClassC2CallC21> CallC21|<_Demo_ClassC_ClassC2CallC22> CallC22 }"];
 edge[color="#002327";style="dashed"];
-_Demo_ClassB_ClassB2 [shape=record, label="_Demo_ClassB_ClassB2 | { <CallB21> CallB21|<CallB22> CallB22 }"];
+_Demo_ClassB_ClassB2 [shape=record, label="_Demo_ClassB_ClassB2 | { <_Demo_ClassB_ClassB2CallB21> CallB21|<_Demo_ClassB_ClassB2CallB22> CallB22 }"];
 edge[color="#FF6347";style="solid"];
  
 }

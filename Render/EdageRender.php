@@ -11,7 +11,7 @@ class EdageRender
                 $sEdage.="edge[color=\"#FF6347\";style=\"solid\"];\n";
 
                 $sEdage.=Utils::replaceDotSlash($aEdage->callerClass)."->".
-                    Utils::replaceDotSlash($aEdage->calleeClass)."[label=\"".
+                    Utils::replaceDotSlash($aEdage->calleeClass).Utils::replaceDotSlash($aEdage->calleeMethod)."[label=\"".
                     Utils::replaceDotSlash($aEdage->method)."\"]\n";
             }else{
                 //father->我[label="父子"]
@@ -20,8 +20,8 @@ class EdageRender
                 }elseif($aEdage->method=="call"){
                     $sEdage.="edge[color=\"#00FF27\";style=\"dashed\"];\n";
                 }
-                $sEdage.=Utils::replaceDotSlash($aEdage->callerClass)."->".
-                    Utils::replaceDotSlash($aEdage->calleeClass)."[label=\"".
+                $sEdage.=Utils::replaceDotSlash($aEdage->callerClass).Utils::replaceDotSlash($aEdage->callerMethod)."->".
+                    Utils::replaceDotSlash($aEdage->calleeClass).Utils::replaceDotSlash($aEdage->calleeMethod)."[label=\"".
                     Utils::replaceDotSlash($aEdage->method)."\"]\n";
                 $sEdage.="edge[color=\"#FF6347\";style=\"solid\"];\n";
             }
@@ -35,7 +35,8 @@ class EdageRender
         $aMethod=[];
         foreach ($aEdages as $aEdage){
             if ($aEdage->method=="method"){
-                $aMethod[$aEdage->callerClass][]=$aEdage;
+                //.Utils::replaceDotSlash($aEdage->callerMethod) nil
+                $aMethod[Utils::replaceDotSlash($aEdage->callerClass)][]=$aEdage;
             }
         }
 
@@ -46,7 +47,7 @@ class EdageRender
             // struct3 [shape=record,label="hello\nworld |{ b |{c|<here> d|e}| f}| g | h"];
             $aLables=[];
             foreach ($aEdages as $edage){
-                $aLables[]="<".Utils::replaceDotSlash($edage->calleeClass)."> ". Utils::replaceDotSlash($edage->calleeClass);
+                $aLables[]="<".Utils::replaceDotSlash($edage->calleeClass).Utils::replaceDotSlash($edage->calleeMethod)."> ". Utils::replaceDotSlash($edage->calleeMethod);
             }
             $sLable=implode("|",$aLables);
 

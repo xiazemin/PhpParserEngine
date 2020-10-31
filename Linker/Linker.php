@@ -18,7 +18,9 @@ class Linker
                    $Callee=Relation::getCallee($aAllClass,$aAllMethod,$sClass,$aMethodInfo,$obj,$function);
                    foreach ($function as $f) {
                        $aEdages[] = new Edage(
+                           $sClass,
                            $sMethod,
+                           $Callee,
                            $f,//$Callee,
                            "call"
                        );
@@ -36,7 +38,9 @@ class Linker
                $Callee=Relation::getStaticCallee($aAllClass,$aAllMethod,$sClass,$calleeClass,$function);
                foreach ($function as $f) {
                    $aEdages[] = new Edage(
-                       $sMethod,
+                    $sClass,
+                    $sMethod,
+                    $Callee,
                        $f,// $Callee,
                        "staticCall"
                    );
@@ -60,6 +64,8 @@ class Linker
         }
         foreach ($aAllMethod[$sEntranceClass] as $sMethodName => $aMethodInfo){
             $aEdages[]=new Edage(
+                $sEntranceClass,
+                "",
                 $sEntranceClass,
                 $sMethodName,
                 "method"
